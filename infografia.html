@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Historia de la Administración y la Tecnología</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f4f7fb;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    h1 {
+      text-align: center;
+      margin: 40px 0;
+      font-size: 2.8rem;
+      color: #2c3e50;
+    }
+
+    .container {
+      padding: 20px;
+      position: relative;
+      width: 50%;
+      box-sizing: border-box;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.8s ease;
+    }
+
+    .container.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .container.left {
+      left: 0;
+    }
+
+    .container.right {
+      left: 50%;
+    }
+
+    .content {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 15px;
+      position: relative;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+
+    .content:hover {
+      transform: scale(1.02);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    }
+
+   
+    .container.right::before {
+      left: -10px;
+    }
+
+    h2 {
+      margin-top: 0;
+      color: #2980b9;
+    }
+
+    p {
+      margin: 0 0 10px;
+      color: #555;
+    }
+
+    .extra {
+      display: none;
+      margin-top: 10px;
+      background: #ecf6ff;
+      padding: 10px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 8px 12px;
+      background: #3498db;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #2980b9;
+    }
+
+    /* Sección video */
+    .video-section {
+      text-align: center;
+      margin: 50px auto;
+      padding: 20px;
+      max-width: 900px;
+    }
+
+    .video-section h2 {
+      margin-bottom: 20px;
+      color: #2c3e50;
+    }
+
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    
+    @media screen and (max-width: 768px) {
+      
+
+      .container {
+        width: 100%;
+      }
+
+      .container.left, 
+      .container.right {
+        left: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Historia de la Administración y la Tecnología</h1>
+
+  <div class="timeline">
+    <div class="container left">
+      <div class="content">
+        <h2>1900s</h2>
+        <p>Administración científica de Taylor: cronómetros, tableros y primeras herramientas tecnológicas.</p>
+        <button class="btn" onclick="toggleExtra(this)">Ver más</button>
+        <div class="extra">
+          <p>Se buscaba la máxima eficiencia en fábricas, sentando las bases para integrar tecnología en procesos administrativos.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container right">
+      <div class="content">
+        <h2>1950s</h2>
+        <p>Primeras computadoras en empresas: inicio de los sistemas de información.</p>
+        <button class="btn" onclick="toggleExtra(this)">Ver más</button>
+        <div class="extra">
+          <p>Se usaban para cálculos masivos y almacenamiento de datos contables, cambiando la manera de gestionar información.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container left">
+      <div class="content">
+        <h2>1980s</h2>
+        <p>Popularización de las PCs: hojas de cálculo y bases de datos.</p>
+        <button class="btn" onclick="toggleExtra(this)">Ver más</button>
+        <div class="extra">
+          <p>Herramientas como Lotus 1-2-3 y Excel permitieron a administradores analizar datos sin depender de especialistas.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container right">
+      <div class="content">
+        <h2>2000s</h2>
+        <p>Sistemas ERP, CRM y la nube transforman la administración.</p>
+        <button class="btn" onclick="toggleExtra(this)">Ver más</button>
+        <div class="extra">
+          <p>La globalización demandó software capaz de conectar filiales, controlar inventarios y mejorar la relación con clientes.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container left">
+      <div class="content">
+        <h2>Actualidad</h2>
+        <p>Inteligencia artificial, big data y automatización.</p>
+        <button class="btn" onclick="toggleExtra(this)">Ver más</button>
+        <div class="extra">
+          <p>Hoy las empresas usan IA para predecir mercados, optimizar procesos y personalizar experiencias a gran escala.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="video-section">
+    <h2>La tecnología en la administración</h2>
+    <div class="video-container">
+      <iframe  src="https://www.youtube.com/embed/Dl74f5EJYOY?si=d4fbh4BVQDCXs5gr" 
+              title="Historia de la Administración"
+              allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+
+  <script>
+    // Animación scroll
+    const containers = document.querySelectorAll('.container');
+    function showElements() {
+      const triggerBottom = window.innerHeight * 0.85;
+      containers.forEach(container => {
+        const boxTop = container.getBoundingClientRect().top;
+        if (boxTop < triggerBottom) {
+          container.classList.add('show');
+        }
+      });
+    }
+    window.addEventListener('scroll', showElements);
+    window.addEventListener('load', showElements);
+
+    // Botón ver más
+    function toggleExtra(button) {
+      const extra = button.nextElementSibling;
+      if (extra.style.display === "block") {
+        extra.style.display = "none";
+        button.textContent = "Ver más";
+      } else {
+        extra.style.display = "block";
+        button.textContent = "Ver menos";
+      }
+    }
+  </script>
+</body>
+</html>
+
+
